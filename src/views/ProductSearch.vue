@@ -126,6 +126,7 @@ const isSearchFiltersOpen = ref(false);
 <!--            </template>-->
             <template #cart="{ data }">
               <ui-icon-button
+                :id="data.price_list_id + data.price_id + 'cart'"
                 @click="addDetailToCart(data)"
               >
                 <ui-icon
@@ -148,6 +149,7 @@ const isSearchFiltersOpen = ref(false);
                 :max="data.count"
                 inputType="number"
                 :id="data.price_id"
+                :inputId="data.price_list_id + data.price_id + 'quantity'"
                 class="small"
                 style="width: 70px; height: 50px; padding: 0 8px"
               ></ui-textfield>

@@ -86,7 +86,7 @@
       </ui-textfield>
     </div>
     <div class="col-12 col-md-12" style="margin-top: 10px">
-      <ui-button id="continue-shopping"
+      <ui-button id="add-to-cart"
           :disabled="!buttonAddCartEnable"
           style="color: #0069c8"
           class="w-100"
