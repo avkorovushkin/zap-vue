@@ -209,9 +209,11 @@ export default defineComponent({
 
           .then((response: ResponseData) => {
             if (response.data.code != 409) {
-              this.typeMessage = "УВЕДОМЛЕНИЕ!"
+              this.typeMessage = ""
               this.showErrMessage = true;
-              this.errMessage = "Для вас создан пользователь с логином " + response.data.login
+              this.errMessage = "Для вас создан пользователь " + response.data.login +
+                  "." +
+                  " \nС вами свяжется менеджер ZAP. "
             } else {
               this.typeMessage = "ВНИМАНИЕ!"
               this.showErrMessage = true;

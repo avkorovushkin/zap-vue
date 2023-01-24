@@ -100,7 +100,7 @@ export default defineComponent({
           .catch((e: Error) => {
             if (e.response.status == 404) {
               this.typeNotification = "ОШИБКА"
-              this.notificationMessage = "Аккаунта с данным электронным адресом не зарегестрированно."
+              this.notificationMessage = "Аккаунта с данным электронным адресом не найдено."
               this.showNotification = true
             } else {
               this.typeNotification = "ОШИБКА"
