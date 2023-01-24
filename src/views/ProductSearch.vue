@@ -14,8 +14,8 @@ import ProductSearchFilters from "../components/Search/ProductSearchFilters.vue"
 // ];
 
 const searchDataBody = [
-  { field: "make_name"},
-  { field: "supplier_name" },
+  { field: "make_name", width: 20},
+  // { field: "supplier_name" },
   { field: "count",
     fn: (data: { count: number; }) => {
     if (data.count == 10000){
@@ -25,20 +25,20 @@ const searchDataBody = [
     }
   },
   { field: "time_delivery" },
-  { field: "price",
+  { field: "price", width: 20,
     fn: (data: { price: number; }) => {
       return data.price.toFixed(2);
     }
   },
   // { field: "time_delivery_direction" },
-  { slot: "quantity",},
-  { slot: "cart" },
+  { slot: "quantity", width: 20 },
+  { slot: "cart", align: "right", width: 20 },
   // { slot: "delivery" },
 ];
 
 const searchDataHead = [
   { value: "Бренд"},
-  { value: "Наличие"},
+  // { value: "Поставщик"},
   { value: "Количество"},
   { value: "Срок доставки (дн.)" },
   { value: "Цена ₽" },
